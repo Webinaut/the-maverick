@@ -5,11 +5,19 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout pageTitle={frontmatter.title}>
-  <Image
-    src={frontmatter.hero}
-    alt={frontmatter.title}
-    width="1000"
-    height="1000"
-  />
+  <div class="image-wrapper">
+    <Image
+      src={frontmatter.hero}
+      alt={frontmatter.title}
+      width="1000"
+      height="1000"
+    />
+  </div>
   <slot />
 </Layout>
+<style>
+  .image-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+</style>
