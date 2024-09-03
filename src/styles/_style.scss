@@ -69,17 +69,21 @@ input[type="reset"],
 input[type="button"],
 a[role="button"] {
   #{$css-var-prefix}font-weight: 500;
-  border-radius: 9999px;
+  border-radius: 2px;
   padding: 0.5em;
   min-width: 200px;
+  color: var(--pico-primary);
+  background-color: var(--pico-primary-inverse);
+  filter: drop-shadow(1px 2px 4px hsl(180, 39%, 38%));
   &:hover {
     color: var(--pico-primary-inverse);
     background-color: var(--pico-primary);
-    --shadow-color: 0deg 0% 0%;
-    box-shadow: 0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.07),
-      1.2px 2.3px 3.4px -0.4px hsl(var(--shadow-color) / 0.11),
-      2.6px 5.2px 7.7px -0.8px hsl(var(--shadow-color) / 0.15),
-      5.8px 11.6px 17.1px -1.2px hsl(var(--shadow-color) / 0.18);
+    filter: none;
+    // --shadow-color: 0deg 0% 0%;
+    // box-shadow: 0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.07),
+    //   1.2px 2.3px 3.4px -0.4px hsl(var(--shadow-color) / 0.11),
+    //   2.6px 5.2px 7.7px -0.8px hsl(var(--shadow-color) / 0.15),
+    //   5.8px 11.6px 17.1px -1.2px hsl(var(--shadow-color) / 0.18);
   }
 }
 // Astro Styles
@@ -105,16 +109,16 @@ a[role="button"] {
   padding: 0 10px;
 }
 .active {
-  color: var(--pico-primary);
+  color: var(--pico-primary-underline);
   padding-bottom: 0.2em;
-  border-bottom: 2px solid var(--pico-primary);
+  border-bottom: 2px solid var(--pico-primary-underline);
   border-radius: var(--pico-border-radius);
 }
 
 @media only screen and (min-width: 769px) {
   nav > ul > li > a,
   label {
-    color: var(--pico-primary-inverse);
+    color: var(--pico-primary);
     font-weight: 500;
   }
 
@@ -199,7 +203,7 @@ a[role="button"] {
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    background: var(--pico-primary-inverse);
+    background: var(--pico-primary);
     border-radius: 3px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -210,9 +214,9 @@ a[role="button"] {
   }
   .main-nav.expanded {
     z-index: 1;
-    background: var(--pico-primary-inverse);
+    background: var(--pico-primary);
     padding: 0.5em;
-    border: solid var(--pico-primary);
+    border: solid var(--pico-primary-inverse);
     border-width: 2px 0 0 0;
     box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.1);
     display: block;
@@ -226,7 +230,7 @@ a[role="button"] {
     color: var(--pico-submenu-color);
   }
   nav li a.active {
-    color: var(--pico-primary);
+    color: var(--pico-primary-inverse);
   }
   /* Dropdown Styles */
   // .main-nav .sub-menu.martin,
