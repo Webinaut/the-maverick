@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Layout from "../layouts/LayoutWide.astro";
+import { getCollection } from "astro:content";
+import BlogArticle from "../components/BlogArticle.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const allPosts = await getCollection("articles");
+allPosts.sort((b, a) => b.data.ranking.valueOf() - a.data.ranking.valueOf());
+// console.log(allPosts.map((post) => post.slug));
+const pageTitle = "Articles";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Layout pageTitle={pageTitle}>
+      <h3>The Musings Of An Enigmatic Maverick</h3>
+      <p>
+        The websites presented on this page reflect a diverse set of briefs and
+        solutions. Whilst all of them were built using WordPress or Astro, and
+        all of them are mobile-responsive, the manner in which they were built
+        differs substantially. Click on “View Project” if you would like to see
+        some of the detail.
+      </p>
+      <ul>
+        {
+          allPosts.map((post) => (
+            <BlogArticle
+              url={`/articles/${post.slug}/`}
+              title={post.data.title}
+              description={post.data.description}
+              hero={post.data.hero}
+              summary={post.data.summary}
+            />
+          ))
+        }
+      </ul>
+    </Layout>
+  </body>
+</html>

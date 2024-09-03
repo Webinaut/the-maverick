@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+const { title, url, tags, hero, summary, description } = Astro.props;
+---
+
+<article>
+  <div class="grid">
+    <div class="text-block">
+      <h2>{title}</h2>
+      <h4>{description}</h4>
+      <p>{summary}</p>
+      <a href={url} role="button" class="outline">View Project</a>
+    </div>
+  </div>
+</article>
+<style>
+  article {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .desktop-main {
+    grid-column: 1/4;
+    margin-bottom: 2em;
+    & img {
+      width: 100%;
+      border-radius: 5px 5px 3px 3px;
+      border: 3px solid #d8d8d8;
+      border-top: 10px solid #d8d8d8;
+    }
+  }
+  .mobile-main {
+    grid-column: 3/4;
+    align-self: end;
+    margin: 0 1em;
+    & img {
+      width: 100%;
+      border-radius: 5px;
+      border: 3px solid #d8d8d8;
+      border-top: 10px solid #d8d8d8;
+      border-bottom: 20px solid #d8d8d8;
+    }
+  }
+  .desktop-main,
+  .mobile-main {
+    grid-row: 1/2;
+  }
+  .text-block {
+    grid-column: 4/7;
+    padding: 0 1em;
+  }
+  @media screen and (max-width: 768px) {
+    .mobile-main {
+      display: none;
+    }
+    .grid {
+      display: block;
+    }
+  }
+</style>

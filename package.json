@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "the-maverick",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.1"
+    "@astrojs/sitemap": "^3.1.6",
+    "@picocss/pico": "^2.0.6",
+    "astro": "^4.15.1",
+    "mdast-util-to-string": "^4.0.0",
+    "reading-time": "^1.5.0",
+    "sass": "^1.77.6"
   }
 }

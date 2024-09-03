@@ -1,16 +1,55 @@
 ---
-
+import Layout from "../layouts/FPLayout.astro";
+// import { Image } from "astro:assets";
+const pageTitle = "Home Page";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div class="main">
+    <article>
+      <p>
+        Hi. I'm Martin. I’m the owner at One Stop Sites as well as a freelance
+        Web Developer. I have been developing, supporting and managing websites
+        for over 10 years.
+      </p>
+      <p>
+        I started my development career in 2012 building WordPress authority
+        sites, doing SEO (Search Engine Optimisation) and Social Media
+        Marketing.
+      </p>
+      <p>
+        Today, I build, deploy and manage many Wordpress websites, as well as
+        some Astro websites, such as this one. Where the website content is not
+        required to be frequently updated, Astro sites offer the best
+        performance.
+      </p>
+      <p>
+        One Stop Sites offers a one stop service for all your website needs.
+      </p>
+      <p><a href="/about-me">More About Us</a></p>
+      <p><a href="/portfolio">Our Portfolio</a></p>
+    </article>
+  </div>
+</Layout>
+<style lang="scss">
+  .main {
+    margin-top: 3em;
+  }
+  .fp {
+    text-align: center;
+    > p {
+      text-align: left;
+    }
+  }
+  button a {
+    text-decoration: none;
+  }
+
+  .fp > header,
+  .fp > footer {
+    border: none;
+  }
+  img {
+    height: 154px;
+  }
+</style>
