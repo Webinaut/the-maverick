@@ -1,9 +1,8 @@
 ---
 title: "The Hard Stuff Is Easy"
 description: "The Soft Stuff Is Hard"
-ranking: 1
-hero: /assets/images/MartinSlack001-scaled.jpg
-# hero: /assets/images/undraw_sorting_thoughts_re_fgli.svg
+ranking: 2
+hero: /assets/images/undraw_sorting_thoughts_re_fgli.svg
 summary: "Chocolaterie RenMar is an artisan chocolate producer based near Mansfield, Victoria, Australia. The website showcases its products, services and activities as well as featuring an online retail and wholesale shop."
 tags: ["article"]
 ---
