@@ -21,13 +21,6 @@ const { title, url, tags, hero, summary, description } = Astro.props;
     padding-left: 0%;
     padding-right: 0%;
   }
-  h2,
-  h4 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: calc(var(--pico-font-size) * 0.75);
-    line-height: calc(var(--pico-line-height) * 0.75);
-  }
   .grid {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -52,6 +45,15 @@ const { title, url, tags, hero, summary, description } = Astro.props;
   .text-block {
     grid-column: 3/7;
     padding: 0 1em;
+  }
+  @media screen and (min-width: 769px) {
+    h2,
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: calc(var(--pico-font-size) * 0.75);
+      line-height: calc(var(--pico-line-height) * 0.75);
+    }
   }
   @media screen and (max-width: 768px) {
     .grid {
