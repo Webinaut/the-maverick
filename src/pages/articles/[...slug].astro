@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+import PostComments from "../../components/PostComments.astro";
 
 export async function getStaticPaths() {
   const blogPostEntries = await getCollection("articles");
@@ -16,5 +17,16 @@ const { Content } = await entry.render();
 ---
 
 <BlogPostLayout frontmatter={entry.data}>
-  <Content />
+  <article>
+    <Content />
+  </article>
+  <article>
+    <h3 style="text-align: center;">Comments</h3>
+    <p>
+      The comments section is a place for healthy, constructive and challenging
+      conversations. The basic rule is simple – I encourage you to share your
+      views, but be respectful of your fellow commenters.
+    </p>
+    <PostComments />
+  </article>
 </BlogPostLayout>
