@@ -3,11 +3,11 @@ import Layout from "../layouts/Layout.astro";
 // import Layout from "../layouts/LayoutWide.astro";
 import { getCollection } from "astro:content";
 import BlogArticle from "../components/BlogArticle.astro";
+import { getReadingTime } from "../scripts/readingtime.js";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 const allPosts = await getCollection("articles");
 allPosts.sort((b, a) => b.data.ranking.valueOf() - a.data.ranking.valueOf());
-// console.log(allPosts.map((post) => post.slug));
 const pageTitle = "Articles";
 ---
 
@@ -38,6 +38,7 @@ const pageTitle = "Articles";
               description={post.data.description}
               hero={post.data.hero}
               summary={post.data.summary}
+              readingTime={getReadingTime(post.body)}
             />
           ))
         }

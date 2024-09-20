@@ -1,7 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import { Image } from "astro:assets";
-const { minutesRead } = Astro.props.frontmatter;
+// const { minutesRead } = Astro.props.frontmatter;
 const { frontmatter } = Astro.props;
 ---
 
@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   <div class="image-wrapper">
     <Image src={frontmatter.hero} alt={frontmatter.title} />
   </div>
-  <p>{minutesRead}</p>
+  <!-- <p>{minutesRead}</p> -->
   <slot />
 </Layout>
 <style lang="scss">

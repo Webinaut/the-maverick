@@ -11,6 +11,7 @@ const articleCollection = defineCollection({
       summary: z.string(),
       ranking: z.number(),
       tags: z.array(z.string()),
+      readingTime: z.number(),
     }),
 });
 // Export a single `collections` object to register your collection(s)

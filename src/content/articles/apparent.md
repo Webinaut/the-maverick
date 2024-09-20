@@ -5,6 +5,7 @@ ranking: 1
 hero: /assets/images/undraw_detailed_analysis_re_tk6j.svg
 summary: "Chocolaterie RenMar is an artisan chocolate producer based near Mansfield, Victoria, Australia. The website showcases its products, services and activities as well as featuring an online retail and wholesale shop."
 tags: ["article"]
+readingTime: 0
 ---
 
 ### Marketing Artisan Chocolate Products
