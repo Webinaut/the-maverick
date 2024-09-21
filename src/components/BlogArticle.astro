@@ -14,8 +14,8 @@ const { title, url, tags, hero, summary, description, readingTime } =
     </div>
     <div class="text-block">
       <h2>{title}</h2>
-      <h4>{description}</h4>
-      <h5>{readingTime} minute read</h5>
+      <h3>{description}</h3>
+      <h4>{readingTime} minute read</h4>
       <p>{summary}</p>
       <Btn buttonlink={url} , buttontext="Read Article" />
     </div>
@@ -53,7 +53,9 @@ const { title, url, tags, hero, summary, description, readingTime } =
   }
   @media screen and (min-width: 769px) {
     h2,
-    h4 {
+    h3,
+    h4,
+    h5 {
       margin-top: 0;
       margin-bottom: 1rem;
       font-size: calc(var(--pico-font-size) * 0.75);
