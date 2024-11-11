@@ -1,64 +1,17 @@
 ---
 title: The Apparent Issue vs The Real Issue
-description: Seeing Beyond The Superficial
+description: Thinking Beyond The Superficial
 ranking: 1
-hero: /assets/images/undraw_detailed_analysis_re_tk6j.svg
-summary: Chocolaterie RenMar is an artisan chocolate producer based near
-  Mansfield, Victoria, Australia. The website showcases its products, services
-  and activities as well as featuring an online retail and wholesale shop.
+hero: /assets/images/absurd.design-chapter-1-03.png
+summary: Differentiating between the real and the apparent is a complex process
+  that requires a combination of critical thinking, empirical investigation, and
+  awareness of subjective influences.
 tags:
   - article
 readingTime: 0
 ---
+I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do. Just go back and put one little more happy tree in there. Everybody's different. Trees are different. Let them all be individuals. We'll put some happy little leaves here and there.
 
-### Marketing Artisan Chocolate Products
+These things happen automatically. All you have to do is just let them happen. Everyone wants to enjoy the good parts - but you have to build the framework first. Let's do that again. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue. The very fact that you're aware of suffering is enough reason to be overjoyed that you're alive and can experience it. If you do too much it's going to lose its effectiveness.
 
-### The Brief
-
-Chocolaterie RenMar produces artisan chocolate products using Belgian couverture chocolate and locally sourced ingredients.
-
-It sells its products at farmers markets as well as online, on a third party e-commerce platform - Farmhouse Direct.
-
-The producer needed a website to promote its products and services as well as to house an online retail and wholesale store.
-
-### The Solution
-
-Thesis theme was used together with a skin designed to accomodate an e-commerce online store. It was customised using CSS to create a unique, clean look and feel.
-
-Wordpress plugins were used to provide site optimisation, security and backups. In addition, several Woocommerce plugins were installed to facilitate user-level shop functionality, such as customised product lists for user categories and custom shipping classes.
-
-### Main Features
-
-- Skin customisation
-- CSS customisation
-- Image editing, colours, typography
-- Responsive design
-- Google Analytics
-- Woocommerce installation and customisation
-- Site optimisation and SEO
-
-### Marketing Artisan Chocolate Products
-
-### The Brief
-
-Chocolaterie RenMar produces artisan chocolate products using Belgian couverture chocolate and locally sourced ingredients.
-
-It sells its products at farmers markets as well as online, on a third party e-commerce platform - Farmhouse Direct.
-
-The producer needed a website to promote its products and services as well as to house an online retail and wholesale store.
-
-### The Solution
-
-Thesis theme was used together with a skin designed to accomodate an e-commerce online store. It was customised using CSS to create a unique, clean look and feel.
-
-Wordpress plugins were used to provide site optimisation, security and backups. In addition, several Woocommerce plugins were installed to facilitate user-level shop functionality, such as customised product lists for user categories and custom shipping classes.
-
-### Main Features
-
-- Skin customisation
-- CSS customisation
-- Image editing, colours, typography
-- Responsive design
-- Google Analytics
-- Woocommerce installation and customisation
-- Site optimisation and SEO
+If you don't think every day is a good day - try missing a few. You'll see. In life you need colors. Fluff it up a little and hypnotize it.  We can fix anything. Automatically, all of these beautiful, beautiful things will happen. There we go. Look at them little rascals.
