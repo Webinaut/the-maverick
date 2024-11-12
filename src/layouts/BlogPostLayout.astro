@@ -8,6 +8,7 @@ const { frontmatter } = Astro.props;
 <Layout pageTitle={frontmatter.title}>
   <div class="image-wrapper">
     <Image src={frontmatter.hero} alt={frontmatter.title} />
+    <p set:html={frontmatter.caption} />
   </div>
   <!-- <p>{minutesRead}</p> -->
   <slot />
@@ -15,7 +16,7 @@ const { frontmatter } = Astro.props;
 <style lang="scss">
   .image-wrapper {
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto 1em;
     padding: 0.5em;
     $shadow-color: #f4f4f4;
     box-shadow:
@@ -23,5 +24,9 @@ const { frontmatter } = Astro.props;
       0 0 3.6px -0.8px $shadow-color,
       0 0 9px -1.7px $shadow-color,
       0 0 21.9px -2.5px $shadow-color;
+    & p {
+      text-align: right;
+      font-size: 0.6em;
+    }
   }
 </style>

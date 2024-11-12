@@ -3,7 +3,7 @@ title: The Apparent Issue vs The Real Issue
 description: Thinking Beyond The Superficial
 ranking: 1
 hero: /assets/images/absurd.design-chapter-1-03.png
-caption: Illustration:<a href="https://absurd.design/" target="_blank"> absurd.design</a>
+caption: Illustration - <a href="https://absurd.design/" target="_blank"> absurd.design</a>
 summary: Differentiating between the real and the apparent is a complex process
   that requires a combination of critical thinking, empirical investigation, and
   awareness of subjective influences.

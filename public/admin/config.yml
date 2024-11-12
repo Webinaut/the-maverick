@@ -28,7 +28,7 @@ collections:
           value_type: "float",
         }
       - { label: "Post Image", name: "hero", widget: "image" }
-      - { label: "Image Caption", name: "caption", widget: "text" }
+      - { label: "Image Caption", name: "caption", widget: "string" }
       - { label: "Articles Page Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["articles"] }
       - { label: "Body", name: "body", widget: "markdown" }

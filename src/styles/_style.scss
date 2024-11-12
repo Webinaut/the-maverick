@@ -61,7 +61,12 @@ h5 {
   #{$css-var-prefix}font-size: 1.25rem;
   #{$css-var-prefix}typography-spacing-vertical: 1.25rem;
 }
-
+a {
+  color: var(--pico-primary-inverse);
+  &:hover {
+    color: var(--pico-text-selection-color);
+  }
+}
 // button,
 // button[type="submit"],
 // input[type="submit"],
