@@ -1,7 +1,7 @@
 ---
 title: The Hard Stuff Is Easy
 description: The Soft Stuff Is Hard
-ranking: 2
+ranking: 2.1
 hero: /assets/images/absurd.design-chapter-1-32.png
 summary: Scratch tuxedo cats always looking dapper stretched out on bed stare at
   the wall, play with food and get confused by dust
