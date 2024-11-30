@@ -1,9 +1,12 @@
 ---
+interface Props {
+  url: string;
+}
 import Layout from "../layouts/Layout.astro";
-// import Layout from "../layouts/LayoutWide.astro";
 import { getCollection } from "astro:content";
 import BlogArticle from "../components/BlogArticle.astro";
 import { getReadingTime } from "../scripts/readingtime.js";
+import { getViews } from "../scripts/views.js";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 const allPosts = await getCollection("articles");
@@ -22,6 +25,7 @@ const pageTitle = "Articles";
   <body>
     <Layout pageTitle={pageTitle}>
       <h3>The Musings Of An Enigmatic Maverick</h3>
+      <!-- <PageViews /> -->
       <p>
         The articles presented below have been inspired by things I have read or
         have seen or heard over the years. I am especially drawn to perspectives
@@ -38,6 +42,7 @@ const pageTitle = "Articles";
               hero={post.data.hero}
               summary={post.data.summary}
               readingTime={getReadingTime(post.body)}
+              views={getViews(post.slug)}
             />
           ))
         }

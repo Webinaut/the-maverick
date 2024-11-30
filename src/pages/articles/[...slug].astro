@@ -1,25 +1,31 @@
 ---
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import PostComments from "../../components/PostComments.astro";
+import Btn from "../../components/Button.astro";
 
-export async function getStaticPaths() {
-  const blogPostEntries = await getCollection("articles");
-
-  return blogPostEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+// SSR Code
+import { getEntry } from "astro:content";
+// 1. Get the slug from the incoming server request
+const { slug } = Astro.params;
+if (slug === undefined) {
+  throw new Error("Slug is required");
 }
-
-const { entry } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await entry.render();
+// 2. Query for the entry directly using the request slug
+const entry = await getEntry("articles", slug);
+// 3. Redirect if the entry does not exist
+if (entry === undefined) {
+  return Astro.redirect("/404");
+}
+// End SSR Code
+const { Content } = await entry.render();
+import { getViews } from "../../scripts/views";
+const views = await getViews(entry.slug);
 ---
 
 <BlogPostLayout frontmatter={entry.data}>
   <article>
     <Content />
+    <Btn buttonlink="/articles" , buttontext="Back To Articles" />
   </article>
   <article>
     <h3 style="text-align: center;">Comments</h3>
@@ -32,3 +38,20 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
     <PostComments />
   </article>
 </BlogPostLayout>
+<script define:vars={{ slug: entry.slug }}>
+  // Track view on client-side
+  async function trackView() {
+    try {
+      const response = await fetch(`/api/views/${slug}`, {
+        method: "POST",
+      });
+      const data = await response.json();
+      document.getElementById("viewCount").textContent = data.views;
+    } catch (error) {
+      console.error("Error tracking view:", error);
+    }
+  }
+
+  // Track view when the page loads
+  trackView();
+</script>

@@ -5,6 +5,8 @@ const year = new Date();
 <div class="container-fluid">
   <footer>
     &copy; The Maverick 2024 - <span id="footer-year">{year.getFullYear()}</span
+    > · Design: <a href="https://onestopsites.net.au/" target="_blank"
+      >One Stop Sites</a
     >
   </footer>
 </div>
@@ -26,5 +28,11 @@ const year = new Date();
     text-align: center;
     /* Makes the font smaller */
     font-size: 0.9rem;
+    & a {
+      color: var(--pico-primary-hover);
+    }
+    & a:hover {
+      color: var(--pico-primary-underline);
+    }
   }
 </style>

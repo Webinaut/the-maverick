@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import { remarkReadingTime } from "./remark-reading-time.mjs";
+// import { remarkReadingTime } from "./remark-reading-time.mjs";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,7 +9,9 @@ export default defineConfig({
   site: "https://themaverick.net.au",
   integrations: [sitemap()],
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    // remarkPlugins: [remarkReadingTime],
     extendDefaultPlugins: true,
   },
+  output: "server",
+  adapter: netlify(),
 });

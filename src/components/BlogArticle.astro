@@ -2,8 +2,7 @@
 import { Image } from "astro:assets";
 import Btn from "../components/Button.astro";
 import type { CollectionEntry } from "astro:content";
-import { getReadingTime } from "../scripts/readingtime.js";
-const { title, url, tags, hero, summary, description, readingTime } =
+const { title, url, hero, summary, description, readingTime, views } =
   Astro.props;
 ---
 
@@ -15,7 +14,7 @@ const { title, url, tags, hero, summary, description, readingTime } =
     <div class="text-block">
       <h2>{title}</h2>
       <h3>{description}</h3>
-      <h4>{readingTime} minute read</h4>
+      <h4>{readingTime} minute read | Views: {views}</h4>
       <p>{summary}</p>
       <Btn buttonlink={url} , buttontext="Read Article" />
     </div>
