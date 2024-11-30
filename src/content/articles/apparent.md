@@ -10,7 +10,6 @@ summary: Differentiating between the real and the apparent is a complex process
 tags:
   - article
 readingTime: 0
-views: 0
 ---
 
 I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do. Just go back and put one little more happy tree in there. Everybody's different. Trees are different. Let them all be individuals. We'll put some happy little leaves here and there.
