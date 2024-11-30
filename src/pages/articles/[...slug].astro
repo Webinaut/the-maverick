@@ -18,8 +18,8 @@ if (entry === undefined) {
 }
 // End SSR Code
 const { Content } = await entry.render();
-import { getViews } from "../../scripts/views";
-const views = await getViews(entry.slug);
+// import { getViews } from "../../scripts/views";
+// const views = await getViews(entry.slug);
 ---
 
 <BlogPostLayout frontmatter={entry.data}>
