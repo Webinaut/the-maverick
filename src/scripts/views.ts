@@ -2,10 +2,9 @@ import { getStore } from "@netlify/blobs";
 
 const store = getStore({
   name: "post-views",
-  siteID: process.env.SITE_ID,
-  token: process.env.NETLIFY_BLOB_TOKEN,
+  siteID: "a01a6e35-e6ac-4375-811d-4930a2ce2435",
+  token: "nfp_UCEDrqPCWcmZzPt7KMqCvqvQbcWaBhMff391",
 });
-
 export async function incrementViews(slug: string): Promise<number> {
   const key = `views-${slug}`;
 
@@ -30,3 +29,4 @@ export async function getViews(slug: string): Promise<number> {
     return 0;
   }
 }
+console.log("🚀 ~ store:", store);
