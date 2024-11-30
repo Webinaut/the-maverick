@@ -29,4 +29,3 @@ export async function getViews(slug: string): Promise<number> {
     return 0;
   }
 }
-console.log("🚀 ~ store:", store);
