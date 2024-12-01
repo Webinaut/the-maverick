@@ -2,6 +2,8 @@ import { getStore } from "@netlify/blobs";
 
 const store = getStore({
   name: "post-views",
+  siteID: process.env.SITE_ID,
+  token: process.env.NETLIFY_BLOB_TOKEN,
 });
 export async function incrementViews(slug: string): Promise<number> {
   const key = `views-${slug}`;
