@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import BlogArticle from "../components/BlogArticle.astro";
 import { getReadingTime } from "../scripts/readingtime.js";
-import { getViews } from "../scripts/views.js";
+import { getViews } from "../scripts/views.ts";
 // import Header from "../components/Header.astro";
 // import Footer from "../components/Footer.astro";
 const allPosts = await getCollection("articles");
