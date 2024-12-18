@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import BlogArticle from "../components/BlogArticle.astro";
 import { getReadingTime } from "../scripts/readingtime.js";
-import { getViews } from "../scripts/views.ts";
+// import { getViews } from "../scripts/views.ts";
 // import Header from "../components/Header.astro";
 // import Footer from "../components/Footer.astro";
 const allPosts = await getCollection("articles");
@@ -35,6 +35,15 @@ const pageTitle = "Articles";
       <ul>
         {
           allPosts.map((post) => (
+            // <BlogArticle
+            //   url={`/articles/${post.slug}/`}
+            //   title={post.data.title}
+            //   description={post.data.description}
+            //   hero={post.data.hero}
+            //   summary={post.data.summary}
+            //   readingTime={getReadingTime(post.body)}
+            //   views={getViews(post.slug)}
+            // />
             <BlogArticle
               url={`/articles/${post.slug}/`}
               title={post.data.title}
@@ -42,7 +51,6 @@ const pageTitle = "Articles";
               hero={post.data.hero}
               summary={post.data.summary}
               readingTime={getReadingTime(post.body)}
-              views={getViews(post.slug)}
             />
           ))
         }
